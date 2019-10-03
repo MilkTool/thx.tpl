@@ -55,7 +55,8 @@ class Template {
   }
 
   private function setInterpreterVars(interp : Interp, content : IMap<String, Dynamic>) : Void
-    content.tuples().map(function(t) {
+    for(t in content.tuples())
+    {
       interp.variables.set(t._0, t._1);
-    });
+    }
 }
