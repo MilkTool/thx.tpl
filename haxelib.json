@@ -9,7 +9,6 @@
   "version": "0.2.1",
   "contributors": ["fponticelli"],
   "dependencies" : {
-    "thx.core" : "",
-    "hscript" : "2.0.1"
+    "thx.core" : ""
   }
 }
