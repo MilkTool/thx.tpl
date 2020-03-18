@@ -28,7 +28,7 @@ class Template {
   public function addHelper(name : String, helper : Dynamic) : Void
     helpers.set(name, helper);
 
-  public function execute(content : IMap<String, Dynamic>) : String {
+  public function execute(content : Map<String, Dynamic>) : String {
     var buffer = new Output(escape),
         interp = new EnhancedInterp(),
         bufferStack = [];
@@ -54,7 +54,7 @@ class Template {
     return buffer.toString();
   }
 
-  private function setInterpreterVars(interp : Interp, content : IMap<String, Dynamic>) : Void
+  private function setInterpreterVars(interp : Interp, content : Map<String, Dynamic>) : Void
     for(t in content.tuples())
     {
       interp.variables.set(t._0, t._1);
