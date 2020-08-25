@@ -15,7 +15,7 @@ class EnhancedInterp extends Interp {
     var add = new StringBuf().add;
   }
   override function get( o : Dynamic, f : String ) : Dynamic {
-    if( o == null ) throw Error.EInvalidAccess(f);
+    if( o == null ) throw error(EInvalidAccess(f));
 
     return
     #if getter_support
